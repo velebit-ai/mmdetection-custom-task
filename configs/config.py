@@ -61,10 +61,10 @@ optimizer_config = dict(grad_clip=None)
 # learning policy
 lr_config = dict(
     policy='step',
-    step=[50, 90])
-runner = dict(type='EpochBasedRunner', max_epochs=100)
+    step=[31])
+runner = dict(type='EpochBasedRunner', max_epochs=30)
 
-checkpoint_config = dict(interval=10)
+checkpoint_config = dict(interval=50)
 log_config = dict(
     interval=1,
     hooks=[
@@ -127,6 +127,11 @@ model = dict(
             use_sigmoid=True,
             gamma=2.0,
             alpha=0.25,
+            loss_weight=1.0),
+        loss_col=dict(
+            type='CrossEntropyLoss',
+            use_sigmoid=False,
+            reduction='mean',
             loss_weight=1.0),
         loss_bbox=dict(type='GIoULoss', loss_weight=1.0)),
     # training and testing settings
