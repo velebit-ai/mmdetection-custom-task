@@ -422,8 +422,6 @@ class ColorFashionHead(YOLOFHead):
                 color_weights[pos_inds] = self.train_cfg.pos_weight
         if len(neg_inds) > 0:
             label_weights[neg_inds] = 1.0
-        if len(neg_inds) > 0:
-            color_weights[neg_inds] = 1.0
 
         # map up to original set of anchors
         if unmap_outputs:
