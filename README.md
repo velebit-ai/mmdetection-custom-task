@@ -20,4 +20,7 @@ Run this script inisde the new env to modify the default mmdet install: `fixes/f
 ```
 
 ## Example of training
-`python tools/train.py configs/config.py --work-dir work_dirs/config`
+`python tools/train.py configs/config.py --work-dir work_dirs/example`
+
+## Inference on trained model
+`python tools/test.py work_dirs/example/config.py work_dirs/example/epoch_30.pth --work-dir work_dirs/example/ --out work_dirs/example/results.pkl --eval bbox --eval-options "classwise=True"`
