@@ -1,0 +1,144 @@
+{
+    "images": [
+        {
+            "file_name": "img1.jpg",
+            "height": 2499,
+            "width": 1920,
+            "id": "img1.jpg"
+        },
+        {
+            "file_name": "img2.jpg",
+            "height": 2884,
+            "width": 1920,
+            "id": "img2.jpg"
+        },
+        {
+            "file_name": "img3.jpg",
+            "height": 2880,
+            "width": 1920,
+            "id": "img3.jpg"
+        },
+        {
+            "file_name": "img4.jpg",
+            "height": 2539,
+            "width": 1920,
+            "id": "img4.jpg"
+        }
+    ],
+    "annotations": [
+        {
+            "segmentation": [
+                [
+                    760,
+                    1490,
+                    760,
+                    2499,
+                    1860,
+                    2499,
+                    1860,
+                    1490
+                ]
+            ],
+            "area": 1109900,
+            "iscrowd": 0,
+            "image_id": "img1.jpg",
+            "bbox": [
+                760,
+                1490,
+                1100,
+                1009
+            ],
+            "category_id": 1,
+            "id": 1000,
+            "color": 0
+        },
+        {
+            "segmentation": [
+                [
+                    0,
+                    1100,
+                    0,
+                    2884,
+                    1920,
+                    2884,
+                    1920,
+                    1100
+                ]
+            ],
+            "area": 3425280,
+            "iscrowd": 0,
+            "image_id": "img2.jpg",
+            "bbox": [
+                0,
+                1100,
+                1920,
+                1784
+            ],
+            "category_id": 1,
+            "id": 2000,
+            "color": 1
+        },
+        {
+            "segmentation": [
+                [
+                    500,
+                    620,
+                    500,
+                    2320,
+                    1340,
+                    2320,
+                    1340,
+                    620
+                ]
+            ],
+            "area": 1428000,
+            "iscrowd": 0,
+            "image_id": "img3.jpg",
+            "bbox": [
+                500,
+                620,
+                840,
+                1700
+            ],
+            "category_id": 0,
+            "id": 3000,
+            "color": 1
+        },
+        {
+            "segmentation": [
+                [
+                    750,
+                    520,
+                    750,
+                    2539,
+                    1600,
+                    2539,
+                    1600,
+                    520
+                ]
+            ],
+            "area": 1716150,
+            "iscrowd": 0,
+            "image_id": "img4.jpg",
+            "bbox": [
+                750,
+                520,
+                850,
+                2019
+            ],
+            "category_id": 0,
+            "id": 4000,
+            "color": 0
+        }
+    ],
+    "categories": [
+        {
+            "id": 0,
+            "name": "dress"
+        },
+        {
+            "id": 1,
+            "name": "shirt"
+        }
+    ]
+}
