@@ -7,17 +7,6 @@ from mmdet.models.detectors.yolof import YOLOF
 @DETECTORS.register_module()
 class ColorFashionModel(YOLOF):
 
-    def __init__(self,
-                 backbone,
-                 neck,
-                 bbox_head,
-                 train_cfg=None,
-                 test_cfg=None,
-                 pretrained=None,
-                 init_cfg=None):
-        super().__init__(backbone, neck, bbox_head, train_cfg,
-                         test_cfg, pretrained, init_cfg)
-
     def forward_train(self, img, img_metas, gt_bboxes, gt_labels, gt_colors,
                       gt_bboxes_ignore=None):
         """

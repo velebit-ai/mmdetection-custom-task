@@ -253,7 +253,7 @@ class ColorFashionHead(YOLOFHead):
                     of is a tensor of shape (batch, h * w * num_anchors)
                 - batch_colors (Tensor): Color of all images. Each element \
                     of is a tensor of shape (batch, h * w * num_anchors)
-                - batch_label_weights (Tensor): Color weights of all images \
+                - batch_color_weights (Tensor): Color weights of all images \
                     of is a tensor of shape (batch, h * w * num_anchors)
                 - num_total_pos (int): Number of positive samples in all \
                     images.
