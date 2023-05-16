@@ -36,13 +36,9 @@ def single_gpu_test(model,
         # Color mode expects results for each image to have following form:
         # (bbox_results, color_results). color_results is a dictionary.
 
-        if isinstance(result[0], tuple):
-            if isinstance(result[0][1], dict):
-                color_mode = True
-            else:
-                color_mode = False
-        else:
-            color_mode = False
+        color_mode = False
+        if isinstance(result[0], tuple) and isinstance(result[0][1], dict):
+            color_mode = True
 
         batch_size = len(result)
         if show or out_dir:
@@ -126,13 +122,9 @@ def multi_gpu_test(model, data_loader, tmpdir=None, gpu_collect=False):
         with torch.no_grad():
             result = model(return_loss=False, rescale=True, **data)
 
-            if isinstance(result[0], tuple):
-                if isinstance(result[0][1], dict):
-                    color_mode = True
-                else:
-                    color_mode = False
-            else:
-                color_mode = False
+        color_mode = False
+        if isinstance(result[0], tuple) and isinstance(result[0][1], dict):
+            color_mode = True
 
             # encode mask results
             if isinstance(result[0], tuple) and not color_mode:
