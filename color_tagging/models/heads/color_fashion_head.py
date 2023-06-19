@@ -47,6 +47,8 @@ class ColorFashionHead(YOLOFHead):
         self.loss_col = build_loss(loss_col)
         self.num_col_convs = num_col_convs
         self.use_sigmoid_col = loss_col.get('use_sigmoid', False)
+        # If we use loss that requires softmax (cross entropy loss),
+        # then we consider the background as an additional class.
         if self.use_sigmoid_col:
             self.col_out_channels = num_colors
         else:
